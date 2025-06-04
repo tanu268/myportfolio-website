@@ -73,29 +73,120 @@
       </div>
       <div class="col-lg-10 order-1 order-lg-2">
         <article class="single-blog">
-          <a href="#" class="tag">Tech Journey</a>
-          <p class="title">Beginning of My Data Science Journey</p>
+          <a href="#" class="tag">proble-solving</a>
+          <p class="title">A journal-style space for problem-solving, errors, and breakthroughs.</p>
           <ul class="meta">
             <li>By <a href="about.html">Tanu Namdeo</a></li>
           </ul>
           <img src="images/blog/thum1.png" alt="banner">
 
-          <p>Hello everyone, Tanu this side. I’m quite nervous about writing my first blog because I don’t know how it’s going to turn out — but let’s take the first step.
-I read somewhere that your first podcast will be bad, your first video will be bad, and whatever you do for the first time will probably be bad. But your 100th attempt won’t be the same as your first.
-So, with this quote, let me share my data science journey.
-            <br>
-            <br>
+          <p><strong>💻 I Built a Salary Calculator in Python (And Fixed My Biggest Mistake!)</strong></p>
+<p>📅 4th June 2025<br>
+✍️ Tanu (BTech Data Science Student)</p>
 
-            So currently, I’m in my 2nd year, and it's the end of my 4th semester. In the initial days, I was very confused about what to do — I felt stuck in different things. At first, I decided to become a data analyst.
-But after exploring Excel, I thought, “This is not for me.” However, while learning it, I was actually understanding the basics of Excel, which now help me in tracking my progress.
-I’ll share more about that in another blog, but for now, let’s stay on topic.
-            <br> <br>
+<p class="section-title">Introduction</p>
+<p>Today I finally solved a real-world Python problem that I had once failed — calculating a monthly in-hand salary after deductions and tax.</p>
+<p>At first, it seemed easy: input salary, apply some deductions, and display the final amount. But soon, I realized the logic behind salary ranges and percentage deductions needed more attention than I expected.</p>
 
-            after doing so many research and watching different roadmap videos in data science i found a 50 min roadmap by campusx
-            and i felt after watching it why i didn't get it earlier like in that video they tell a roadmap in 5 level 
-            so i decided to complete first three level in this year(in 7-Month) ya thats my plan for now
-            <br>
-            <br>
+<p class="section-title">The Problem</p>
+<p>Write a Python program that takes a user's annual CTC (Cost To Company) and calculates the monthly in-hand salary after:</p>
+<ul>
+  <li>HRA deduction (10%)</li>
+  <li>DA deduction (5%)</li>
+  <li>PF deduction (3%)</li>
+  <li>Income tax deduction based on CTC:</li>
+</ul>
+
+<pre>
+CTC in ₹ Lakhs    →    Tax Rate
+Below 5           →    0%
+5 to 10           →    10%
+10 to 20          →    20%
+Above 20          →    30%
+</pre>
+
+<p class="section-title">My First Attempt</p>
+<p>I started by writing:</p>
+
+<pre><code>ctc = int(input("Enter your salary"))
+deductions = ctc * (0.1 + 0.05 + 0.03)
+if ctc < 500000:
+    tax = 0
+elif ctc <= 500000 and ctc > 100000:
+    tax = deductions * 0.1
+...
+</code></pre>
+
+<p>But I kept getting wrong results. I realized my mistake was:</p>
+<ul>
+  <li>I was applying tax on the deduction, not on the remaining salary.</li>
+  <li>My conditional checks like <code>ctc <= 500000 and ctc > 100000</code> were logically confusing.</li>
+</ul>
+
+<p class="section-title">What Confused Me Most: Conditional Ranges</p>
+<p>The line I struggled with most was:</p>
+<pre><code>elif salary <= 500000 and salary > 100000:</code></pre>
+
+<p>Even though it works, it feels mentally hard to parse. I learned that Python supports chained comparisons, which are much easier to read:</p>
+
+<pre><code>elif 100000 &lt; salary &lt;= 500000:</code></pre>
+
+<p>This line is simpler and matches how we speak: “salary is between 1L and 5L.”</p>
+
+<p class="section-title">Final Working Code</p>
+
+<pre><code># Program to calculate in-hand monthly salary
+
+ctc = float(input("Enter your annual CTC in ₹: "))
+
+# Deductions
+hra = ctc * 0.10
+da = ctc * 0.05
+pf = ctc * 0.03
+fixed_deductions = hra + da + pf
+
+# Salary after fixed deductions
+after_deductions = ctc - fixed_deductions
+
+# Tax calculation
+if ctc <= 500000:
+    tax = 0
+elif 500000 < ctc <= 1000000:
+    tax = after_deductions * 0.10
+elif 1000000 < ctc <= 2000000:
+    tax = after_deductions * 0.20
+else:
+    tax = after_deductions * 0.30
+
+# Final in-hand salary
+in_hand_annual = after_deductions - tax
+monthly_salary = in_hand_annual / 12
+
+print("Your in-hand monthly salary is: ₹", round(monthly_salary, 2))
+</code></pre>
+
+<p class="section-title">What I Learned</p>
+<ul>
+  <li>Break problems into steps: input → deductions → tax → monthly output.</li>
+  <li>Avoid overcomplicating <code>if-else</code> conditions.</li>
+  <li>Always double-check if the logic matches the tax slabs.</li>
+  <li>Comment your code — it helps you later.</li>
+  <li>Python’s range chaining like <code>min &lt; x &lt;= max</code> is super useful and clear.</li>
+</ul>
+
+<p class="section-title">Next Steps</p>
+<p>I’m planning to:</p>
+<ul>
+  <li>Accept salary input in lakhs instead of rupees.</li>
+  <li>Add user options for custom deduction rates.</li>
+  <li>Build a simple GUI or web app using Flask.</li>
+</ul>
+
+<p class="section-title">Conclusion</p>
+<p>Sometimes, it's not the complexity of the code but the clarity of logic that matters. Solving this small challenge helped me better understand real-world salary structure and gave me more confidence in handling conditions and percentage-based problems in Python.</p>
+
+<p><strong>#PythonProjects #BeginnerJourney #100DaysOfCode #CTCCalculator #LearnByDoing #CodingDiaries</strong></p>
+<p>Let me know what you think! Have you tried building something like t
 
             <blockquote>
             <p>"You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction."
