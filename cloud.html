@@ -142,6 +142,100 @@
     <em>Reflection:</em> It was a major “aha!” moment to launch my first virtual machine and realize that I can run powerful computations without relying on my local PC.
   </p>
 
+  <h1>Google Cloud Badge 3: Networking & Security – Key Learnings</h1>
+  <p><strong>Date:</strong> 04 June 2025</p>
+  <p><strong>Badge:</strong> Networking and Security in Google Cloud</p>
+  <p><strong>Modules Covered:</strong> Module 7 and Module 8</p>
+
+  <h2>Module 7: Networking in the Cloud</h2>
+
+  <h3>1. Networking Basics</h3>
+  <p>Google Cloud uses Points of Presence (PoPs) to connect LANs, WANs, and the internet across regions for fast, reliable networking.</p>
+
+  <h3>2. Virtual Private Cloud (VPC)</h3>
+  <p>A VPC is a secure, isolated cloud network that connects resources using firewalls and routes. It supports global deployment with regional subnets.</p>
+  <ul>
+    <li><strong>Auto Mode:</strong> Automatically creates one subnet per region with fixed IP ranges.</li>
+    <li><strong>Custom Mode:</strong> Offers full control over subnet creation and IP ranges.</li>
+  </ul>
+
+  <h3>3. Public vs Internal IP Addresses</h3>
+  <p>Public IPs can be temporary or reserved and allow internet access. Internal IPs are private, assigned via DHCP, and used within the VPC.</p>
+
+  <h3>4. Google Cloud Networking Products</h3>
+  <ul>
+    <li><strong>Cloud VPC:</strong> Core networking infrastructure.</li>
+    <li><strong>Cloud Load Balancing:</strong> Distributes traffic across multiple instances.</li>
+    <li><strong>Cloud CDN:</strong> Speeds up content delivery by caching at edge locations.</li>
+    <li><strong>Cloud Interconnect:</strong> Provides direct connections to Google Cloud.</li>
+    <li><strong>Cloud DNS:</strong> Managed DNS services for custom domains.</li>
+  </ul>
+
+  <h3>5. Routes and Firewalls</h3>
+  <p>VPCs have built-in routing and firewall features to control traffic flow without needing manual router provisioning.</p>
+
+  <h3>6. Multi-VPC Networking</h3>
+  <p>Use VPC Peering for private communication between VPCs, and Shared VPC for sharing network resources across projects.</p>
+
+  <h3>7. Hybrid Connectivity</h3>
+  <p>Hybrid options include VPNs, Direct Peering, Carrier Peering, Dedicated Interconnect, and Partner Interconnect to connect on-premises with cloud.</p>
+
+  <h3>8. Cloud Load Balancing</h3>
+  <p>Balances traffic using Layer 4 (TCP/UDP) or Layer 7 (HTTP/HTTPS) across backend services to maintain availability and performance.</p>
+
+  <p><strong>Lab Completed:</strong> Application Load Balancer with GC Armor</p>
+  <p><strong>Quiz Score:</strong> 80% (Passed)</p>
+
+  <h2>Module 8: Observability and Monitoring</h2>
+
+  <h3>1. Infrastructure as Code (IaC)</h3>
+  <p>IaC lets you define and deploy infrastructure through code rather than manual setup, making deployments repeatable and scalable.</p>
+
+  <h3>2. Terraform</h3>
+  <p>Terraform automates infrastructure provisioning using templates. It’s supported by Google Cloud and other platforms.</p>
+
+  <h3>3. Monitoring Importance</h3>
+  <p>Monitoring ensures system reliability and helps with performance tracking, incident response, and optimization.</p>
+
+  <h3>4. Google Cloud Observability</h3>
+  <p>A set of tools for monitoring, logging, tracing, and debugging applications on Google Cloud.</p>
+
+  <h3>5. Cloud Monitoring</h3>
+  <p>Collects metrics like CPU, memory, and uptime from resources and visualizes them using dashboards and alerts.</p>
+
+  <h3>6. Cloud Logging</h3>
+  <p>Centralized log collection system that allows exporting to BigQuery, Cloud Storage, or Pub/Sub for further analysis.</p>
+
+  <h3>7. Error Reporting and Debugging</h3>
+  <p>Detects and aggregates application errors to help developers debug issues with detailed logs and stack traces.</p>
+
+  <h3>8. Cloud Trace and Profiler</h3>
+  <p><strong>Cloud Trace:</strong> Analyzes application latency and performance over time.</p>
+  <p><strong>Cloud Profiler:</strong> Profiles CPU and memory usage to identify performance bottlenecks.</p>
+
+  <h3>9. Log Categories</h3>
+  <ul>
+    <li><strong>Audit Logs:</strong> Track who did what, where, and when.</li>
+    <li><strong>Agent Logs:</strong> Collect data from Google Cloud and AWS VMs.</li>
+    <li><strong>Network Logs:</strong> Include VPC Flow Logs and Firewall Logs.</li>
+    <li><strong>Service Logs:</strong> Captures application logs from deployed services.</li>
+  </ul>
+
+  <p><strong>Quiz Score:</strong> 100% (Perfect Score)</p>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>VPCs offer secure and scalable networking across global regions.</li>
+    <li>Firewalls and routes control internal and external traffic effectively.</li>
+    <li>Cloud Load Balancing improves app performance and uptime.</li>
+    <li>Observability tools provide deep insights for DevOps and developers.</li>
+    <li>Terraform and IaC simplify cloud infrastructure management.</li>
+  </ul>
+
+  <p>I will continue sharing my daily progress and learnings from this course in upcoming posts.</p>
+
+
+
 
       
 
