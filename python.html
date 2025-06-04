@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8" />
+  <title>TanuLogs | Personal Blog Site</title>
+
+  <!--Meta For No Index-->
+  <meta name="robots" content="noindex, Nofollow, Noimageindex">
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- Theme Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
+</head>
+
+<body>
+
+<!-- Navbar Start -->
+<nav class="main-nav navbar navbar-expand-lg">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img class="logo-main" src="images/logo.jpg" alt="logo" />
+    </a>
+    <!-- Toogle Button -->
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-list" id="mainNav">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <!-- Social Link -->
+      
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 order-2 order-lg-1">
+        <div class="share-now">
+          <a href="#" class="scrol">Share</a>
+          <div class="sociel-icon">
+            <ul>
+              <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-10 order-1 order-lg-2">
+        <article class="single-blog">
+          <a href="#" class="tag">learnings</a>
+          <p class="title">Mastering Python: From Basics to Brilliance</p>
+          <ul class="meta">
+            <li>By <a href="about.html">Tanu Namdeo</a></li>
+          </ul>
+          <img src="images/blog/thum2.png" alt="banner">
+
+           <h4>My Python Learning Journey  </h4>
+<br>
+  
+  <h4>Day 1: Importance of Comments &amp; Basic Python Concepts</h4>
+
+  <p>When you start writing a program, always <strong>think first, then add comments before writing code</strong>.<br />
+  Adding comments on every line or before each logic block is very helpful—especially in the industry where other people might read your code.</p>
+
+  <h4>Interesting Python Facts I Found:</h4>
+  <ul>
+    <li>Python automatically uses <code>end=""</code> and <code>sep=""</code> in print statements, which you can customize.</li>
+    <li>Python’s number limit example:
+      <pre><code>print(1e309)  # prints 'inf' since it exceeds the float limit</code></pre>
+    </li>
+    <li><strong>Dynamic Typing:</strong>  
+      You can assign any type of value without declaring variable types explicitly:
+      <pre><code>a = 5
+a = "Tanu"
+print(a)
+      </code></pre>
+    </li>
+    <li>Contrast with <strong>Static Typing</strong> (like C, C++):
+      <pre><code>int a = 5;</code></pre>
+    </li>
+  </ul>
+
+  <h4>Day 2: More Python Basics and Useful Operators</h4>
+
+  <h4>Making Emojis in Python Using Unicode:</h4>
+  <pre><code>unicode = u"\U0001F600\U0001F606\U0001F923"
+print(unicode)  # 😀😆🤣
+  </code></pre>
+
+  <h4>Assignment Operators &amp; Membership Operators</h4>
+
+  <p>Assignment example:</p>
+  <pre><code>a = 2
+a %= 2  # shorthand for a = a % 2
+</code></pre>
+  <p>Note: Python doesn’t support <code>a++</code> or <code>++a</code> like in C/C++.</p>
+
+  <h4>Example Program: Sum of Digits in a 3-Digit Number</h4>
+  <pre><code>number = int(input("Enter a 3 digit number: "))
+
+a = number % 10
+number = number // 10
+
+b = number % 10
+number = number // 10
+
+c = number % 10
+
+print("Sum of digits:", a + b + c)
+</code></pre>
+
+  <h4>Learning Loops: Real-World Examples Matter</h4>
+
+  <p>When asked for examples of loops and any other Concepts in interviews, don’t just say, “printing multiplication tables.” Instead, explain real-world applications, like:</p>
+
+  <blockquote>Food delivery apps (e.g., Zomato) displaying multiple food items with the same structure using loops.</blockquote>
+
+  <h4>My First Attempt at a Multiplication Table:</h4>
+  <pre><code>number = int(input("Enter a number: "))
+
+i = 1
+while i <= 10:
+    print(f"{number} X {i} = {number * i}")
+    i += 1
+</code></pre>
+
+  <h4>While Loops with Else Clause</h4>
+  <pre><code>x = 1
+while x &lt; 3:
+    print(x)
+    x += 1
+else:
+    print("Limit crossed")
+</code></pre>
+
+  <h4>Guessing Game — My First Try &amp; Debugging</h4>
+
+  <h4>Initial code attempt:</h4>
+  <pre><code>number = 7
+print("Try to guess a number")
+num = int(input("Enter a number: "))
+
+while num != number:
+    if num &gt; number:
+        print("You guessed too high, try again.")
+    elif num &lt; number:
+        print("You guessed too low, try again.")
+    num = int(input("Enter a number: "))
+
+print("Correct guess!")
+</code></pre>
+
+  <h4>Bug I Found in a More Advanced Version:</h4>
+  <p>Infinite loops happen if input and counter increment are inside the wrong block. Here's the corrected snippet:</p>
+  <pre><code>import random
+
+jackpot = random.randint(1, 100)
+guess = int(input("Guess the number: "))
+counter = 1
+
+while guess != jackpot:
+    if guess &lt; jackpot:
+        print("Wrong! Guess higher.")
+    else:
+        print("Wrong! Guess lower.")
+    guess = int(input("Guess again: "))
+    counter += 1
+
+print("Correct guess!")
+print("Attempts:", counter)
+</code></pre>
+
+  <h4>Tools I Use for Learning:</h4>
+  <p><a href="https://pythontutor.com/" target="_blank" rel="noopener noreferrer">Python Tutor</a> — great for visualizing code execution step by step.</p>
+
+  <p>I’ll keep sharing my daily learnings here — it’s exciting to see how small steps build up to big progress!</p>
+
+</body>
+</html>
+
+
+
+
+            <blockquote>
+            <p>“Every expert was once a beginner. The journey of a thousand lines of code begins with a single step. Keep learning, stay curious, and never fear mistakes — they are the stepping stones to mastery.”
+            </p>
+          </blockquote>
+
+            
+          </p>
+          <!--
+          <h4>Make better business</h4>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+            <br> <br>
+
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores ea rebum. Stet clita kasd gubergren, no sea
+            takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <blockquote>
+            <p>"You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction."
+            </p>
+          </blockquote>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+            <br> <br>
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores ea rebum. Stet clita kasd gubergren, no sea
+            takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <div class="single-blog-banner">
+            <div class="banner"> <img src="images/blog/single-blog.png" alt="banner">
+            </div>
+            <div class="banner"> <img src="images/blog/single-blog-2.png" alt="banner">
+            </div>
+          </div>
+          <h4>The Dreamy Factors</h4>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+            <br> <br>
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores ea rebum. Stet clita kasd gubergren, no sea
+            takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+        </article>
+        <div class="blog-single-presentation">
+          <ul>
+            <li> <a href="#" class="tag">PREVIOUS</a>
+              <a href="#" class="title">I Moved Across the Country
+                and Never Looked Back</a>
+              <i class="fa fa-clock-o"></i>
+              October 19, 2020 - 2 min
+            </li>
+            <li> <a href="#" class="tag">Next</a><a href="#" class="title">Every Next Level of Your Life
+                Will Demand a Different</a><i class="fa fa-clock-o"></i>
+              October 19, 2020 - 2 min</li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="instagram">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="instagram-item">
+
+          <div class="instagram-item-thum">
+            <img src="images/casestudy1.jpeg" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy3.png" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy1.jpeg" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy3.png" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy1.jpeg" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy3.png" alt="image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <div class="footer-logo">
+          <img src="images/logo.jpg" alt="logo" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="footer-nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="sociale-icon">
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-github"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="copy-right">
+          <p>© Copyright <span id="copyrightYear"></span> - All Rights Reserved by <a href="https://staticmania.com/" target="_blank">StaticMania</a> Distributed By <a href="https://themewagon.com/" target="blank">ThemeWagon</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0&libraries=geometry">
+</script>
+<!-- Vendor JS -->
+<script src="vendor/jQuery/jquery.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/g-map/gmap.js"></script>
+<!-- Main JS -->
+<script src="js/script.js"></script>
+</body>
+
+</html>

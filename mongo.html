@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8" />
+  <title>TanuLogs | Personal Blog Site</title>
+
+  <!--Meta For No Index-->
+  <meta name="robots" content="noindex, Nofollow, Noimageindex">
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- Theme Stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="images/favicon.svg" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.svg" type="image/x-icon" />
+</head>
+
+<body>
+
+<!-- Navbar Start -->
+<nav class="main-nav navbar navbar-expand-lg">
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img class="logo-main" src="images/logo.jpg" alt="logo" />
+    </a>
+    <!-- Toogle Button -->
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#mainNav">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse nav-list" id="mainNav">
+      <!-- Navigation Links -->
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+      <!-- Social Link -->
+      
+    </div>
+  </div>
+</nav>
+<!-- Navbar End -->
+
+<section class="blog-single">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2 order-2 order-lg-1">
+        <div class="share-now">
+          <a href="#" class="scrol">Share</a>
+          <div class="sociel-icon">
+            <ul>
+              <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-10 order-1 order-lg-2">
+        <article class="single-blog">
+          <a href="#" class="tag">Tech Journey</a>
+          <p class="title">Journey to the Cloud: Unlocking Cloud Computing</p>
+          <ul class="meta">
+            <li>By <a href="about.html">Tanu Namdeo</a></li>
+          </ul>
+          <img src="images/blog/thum4.png" alt="banner">
+
+            <h5>My MongoDB Learning Journey: Why I Started </h5>
+
+  <p>When I began my data science journey, I quickly realized that understanding databases is crucial. One of the most popular and powerful NoSQL databases today is <strong>MongoDB</strong> — a flexible, document-based database that can handle complex, nested data structures easily.</p>
+
+  <p>My mentor recommended that I learn MongoDB early on because it’s widely used in real-world projects and modern applications, especially those involving big data and scalable architectures. This pushed me to take the first step and start learning it in depth.</p>
+
+  <h6>Day 1 of Learning MongoDB</h6>
+  <p><strong>Date:</strong> 03 June</p>
+  <p>On my first day, I officially kicked off my MongoDB journey! I installed the two main tools needed to work with MongoDB effectively:</p>
+  <ul>
+    <li><strong>MongoDB Compass</strong> — a GUI tool that makes it easier to visualize and manage your data.</li>
+    <li><strong>MongoDB Shell (mongosh)</strong> — a command-line tool for running database commands.</li>
+  </ul>
+
+  <p>I connected to my local MongoDB server using the shell with this command:</p>
+  <pre><code>mongosh "mongodb://localhost:27017"</code></pre>
+
+  <p>Then I started practicing the basics:</p>
+  <ul>
+    <li>Creating databases and collections</li>
+    <li>Inserting documents, including nested (embedded) documents</li>
+    <li>Updating fields, including arrays and embedded objects</li>
+  </ul>
+
+  <p>Here are some example commands I used:</p>
+  <pre><code>use latest_db  
+db.students.insertOne({ name: "Ram", age: 12 })  
+db.students.updateOne({ name: "shyam" }, { $set: { idCards: { hasPanCard: false, hasAdhaarCard: true } } })  
+db.students.updateMany({}, { $set: { hobbies: ["Anime", "Cooking"] } })  
+</code></pre>
+
+  <div class="highlight">
+    Fun fact: MongoDB supports nesting documents up to 100 levels deep and stores data up to 16MB per document, which is super powerful for complex data modeling.
+  </div>
+
+  <br>
+
+  <h6>Learning Resources</h6>
+  <p>To guide my learning, I followed:</p>
+  <ul>
+    <li><a href="https://www.w3schools.com/mongodb/" target="_blank" rel="noopener">W3Schools MongoDB tutorial</a> — great for clear, step-by-step documentation and examples.</li>
+    <li><a href="https://www.youtube.com/c/EngineeringDigest" target="_blank" rel="noopener">Engineering Digest YouTube Channel</a> — offers practical walkthroughs and real-world use cases that helped me understand MongoDB’s concepts better.</li>
+  </ul>
+
+  <h6>What’s Next?</h6>
+  <p>This is just the beginning of my MongoDB journey! I plan to keep practicing queries, exploring advanced features like aggregation, indexing, and replication, and sharing my progress daily.</p>
+  <p>If you’re new to MongoDB or want to strengthen your basics, follow along with me!</p>
+
+            <blockquote>
+            <p>The path to mastery is paved with curiosity and courage. Don’t be afraid to explore the unknown, ask questions, and make mistakes. Each challenge you face is an opportunity to grow stronger and wiser. Keep your passion alive and trust the process — success will follow.</p>
+          </blockquote>
+
+            
+          </p>
+          <!--
+          <h3>Make better business</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+            <br> <br>
+
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores ea rebum. Stet clita kasd gubergren, no sea
+            takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <blockquote>
+            <p>"You’ve got to get up every morning with determination if you’re going to go to bed with satisfaction."
+            </p>
+          </blockquote>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+            <br> <br>
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores ea rebum. Stet clita kasd gubergren, no sea
+            takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+          <div class="single-blog-banner">
+            <div class="banner"> <img src="images/blog/single-blog.png" alt="banner">
+            </div>
+            <div class="banner"> <img src="images/blog/single-blog-2.png" alt="banner">
+            </div>
+          </div>
+          <h3>The Dreamy Factors</h3>
+          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos accusam et justo duo dolores ea rebum. Stet
+            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+            <br> <br>
+            consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+            sed diam voluptua. At vero eos et accusam et justo duo dolores ea rebum. Stet clita kasd gubergren, no sea
+            takimata sanctus est Lorem ipsum dolor sit amet.
+          </p>
+        </article>
+        <div class="blog-single-presentation">
+          <ul>
+            <li> <a href="#" class="tag">PREVIOUS</a>
+              <a href="#" class="title">I Moved Across the Country
+                and Never Looked Back</a>
+              <i class="fa fa-clock-o"></i>
+              October 19, 2020 - 2 min
+            </li>
+            <li> <a href="#" class="tag">Next</a><a href="#" class="title">Every Next Level of Your Life
+                Will Demand a Different</a><i class="fa fa-clock-o"></i>
+              October 19, 2020 - 2 min</li>
+          </ul>
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="instagram">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="instagram-item">
+
+          <div class="instagram-item-thum">
+            <img src="images/casestudy1.jpeg" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy3.png" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy1.jpeg" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy3.png" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy1.jpeg" alt="image">
+          </div>
+          <div class="instagram-item-thum">
+            <img src="images/casestudy3.png" alt="image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 mx-auto text-center">
+        <div class="footer-logo">
+          <img src="images/logo.jpg" alt="logo" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="footer-nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 mx-auto">
+        <div class="sociale-icon">
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-github"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-envelope"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="copy-right">
+          <p>© Copyright <span id="copyrightYear"></span> - All Rights Reserved by <a href="https://staticmania.com/" target="_blank">StaticMania</a> Distributed By <a href="https://themewagon.com/" target="blank">ThemeWagon</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0&libraries=geometry">
+</script>
+<!-- Vendor JS -->
+<script src="vendor/jQuery/jquery.min.js"></script>
+<script src="vendor/bootstrap/bootstrap.min.js"></script>
+<script src="vendor/slick/slick.min.js"></script>
+<script src="vendor/g-map/gmap.js"></script>
+<!-- Main JS -->
+<script src="js/script.js"></script>
+</body>
+
+</html>
